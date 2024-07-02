@@ -1,0 +1,26 @@
+body {
+    background-color: #6593B3; /* Cor do céu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.donkey-kong {
+    width: 72px; /* Largura de um quadro do sprite */
+    height: 72px; /* Altura de um quadro do sprite */
+    background: url('https://i.gifer.com/1iBn.gif') left center; /* URL do sprite sheet */
+    background-size: 72px; /* Largura total do sprite sheet x Altura do sprite sheet */
+    animation: run-animation 0s steps(10) infinite; /* 10 é o número de quadros no sprite */
+    transform: scale(6); /* Escala 2x */
+}
+
+@keyframes run-animation {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: -600px; /* -60px * número de quadros (10) */
+    }
+}
